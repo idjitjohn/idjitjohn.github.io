@@ -28,9 +28,6 @@ body{
     }
     .details{
         flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
         .question{
             text-align: center;
             font-weight: 400;
@@ -43,12 +40,13 @@ body{
             padding: 1em;
             justify-content: center;
             align-items: flex-start;
-            @media (max-width: 380px){
-                background: red;
-            }
             .proj{
                 width: 33.3333%;
-                height: 15vw;;
+                height: 15vw;
+                @media (max-width: 380px){
+                    width: 100%;
+                    height: 50vw;
+                }
                 box-shadow: 0 0 0 1px #4fa7ff;
                 margin-top: 1px;
             }
