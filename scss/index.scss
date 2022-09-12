@@ -1,0 +1,65 @@
+body {
+  background: #444;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Lato;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: 100;
+  .bigname {
+    margin: 0;
+    padding: 1em 0;
+    box-shadow: 0 0 0 1px rgba(#fff, .1);
+    text-align: center;
+    user-select: none;
+    .mess {
+      font-size: 0.85em;
+      font-weight: 300;
+      a {
+        color: white;
+      }
+    }
+  }
+  .stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .message{
+      font-weight: 100;
+      font-size: 20vw;
+      font-family: Montserrat;
+      &.breathe{
+        animation: breathe 4s infinite;
+      }
+    }
+    .ready{
+      span{
+        transition: 1.5s linear;
+      }
+      &.well{
+        span:first-child {
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
+
+      &:not(.well){
+        span:last-child {
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
+    }
+  }
+}
+
+@keyframes breathe {
+  0% {opacity: 1}
+  40%{opacity: .1; transform: scale(.98)}
+  70%{opacity: .1; transform: scale(.98)}
+  to {opacity: 1}
+}
